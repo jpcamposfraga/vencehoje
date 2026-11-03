@@ -55,6 +55,13 @@ O **VenceHoje** é uma plataforma hiperlocal que conecta estabelecimentos comerc
 
 ---
 
+## 🚀 Links da Aplicação no Ar
+
+- **Produção (Vercel):** [https://vencehoje.vercel.app](https://vencehoje.vercel.app)
+- **Repositório GitHub:** [https://github.com/jpcamposfraga/vencehoje](https://github.com/jpcamposfraga/vencehoje)
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend & Framework:** [Next.js 15 (App Router)](https://nextjs.org/) + [React 19](https://react.dev/)
