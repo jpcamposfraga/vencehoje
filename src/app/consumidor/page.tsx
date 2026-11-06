@@ -11,8 +11,6 @@ import {
   ShoppingBag,
   Ticket,
   MapPin,
-  Sparkles,
-  ArrowRight,
   ShieldCheck,
 } from "lucide-react";
 
@@ -63,13 +61,13 @@ export default function ConsumerCatalogPage() {
                 <ShoppingBag className="w-4 h-4" />
               </span>
               <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                Radar de Ofertas Próximas
+                Radar de Ofertas do Supermercado
               </h1>
             </div>
             <p className="text-xs text-slate-500 mt-1 flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-emerald-600" />
               <span>
-                São Paulo, SP • Exibindo comércios locais a até 2 km
+                São Paulo, SP • Exibindo supermercados parceiros a até 2 km
               </span>
             </p>
           </div>
@@ -106,7 +104,7 @@ export default function ConsumerCatalogPage() {
               <p className="text-xs text-emerald-300/80 max-w-2xl leading-relaxed mt-0.5">
                 Ao contrário de aplicativos com sacolas-surpresa, aqui você vê a foto
                 real, quantidade em estoque, validade exata e não paga taxas
-                online. Reserve gratuitamente e pague no balcão ao retirar.
+                online. Reserve gratuitamente e pague no caixa do supermercado ao retirar.
               </p>
             </div>
           </div>

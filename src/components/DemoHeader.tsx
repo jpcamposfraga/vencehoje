@@ -38,7 +38,7 @@ export function DemoHeader() {
             Modo Pitch EMI
           </span>
           <span className="text-slate-400 hidden sm:inline">
-            Demonstração ao vivo para Empreendedorismo
+            Demonstração ao vivo para Empreendedorismo • Supermercados Regionais
           </span>
         </div>
 
@@ -76,7 +76,7 @@ export function DemoHeader() {
             }`}
           >
             <Store className="w-3.5 h-3.5" />
-            <span>Lojista</span>
+            <span>Supermercado</span>
             {pendingCount > 0 && (
               <span className="bg-amber-500 text-slate-950 font-bold px-1.5 py-0.2 rounded-full text-[10px]">
                 {pendingCount}

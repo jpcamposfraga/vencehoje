@@ -1,7 +1,7 @@
 "use client";
 
 import { ProductCategory } from "@/types";
-import { Search, SlidersHorizontal, Flame, Sparkles } from "lucide-react";
+import { Search, Flame } from "lucide-react";
 
 interface ProductFiltersProps {
   search: string;
@@ -15,10 +15,11 @@ interface ProductFiltersProps {
 
 const CATEGORIES: { id: ProductCategory | "all"; label: string; icon: string }[] = [
   { id: "all", label: "Todas", icon: "✨" },
-  { id: "padaria", label: "Padaria", icon: "🥖" },
+  { id: "acougue", label: "Açougue & Carnes", icon: "🥩" },
+  { id: "laticinios", label: "Frios & Laticínios", icon: "🧀" },
+  { id: "padaria", label: "Padaria & Rotisseria", icon: "🥖" },
   { id: "hortifruti", label: "Hortifrúti", icon: "🍎" },
-  { id: "laticinios", label: "Laticínios", icon: "🧀" },
-  { id: "refeicoes", label: "Refeições", icon: "🍲" },
+  { id: "refeicoes", label: "Pratos Prontos", icon: "🍲" },
   { id: "bebidas", label: "Bebidas", icon: "🥤" },
 ];
 
@@ -42,7 +43,7 @@ export function ProductFilters({
             type="text"
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Buscar por pão, queijo, morango, nome da padaria..."
+            placeholder="Buscar por picanha, queijo, frango, hortifrúti, supermercado..."
             className="w-full text-xs sm:text-sm pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm"
           />
         </div>

@@ -5,12 +5,10 @@ import Link from "next/link";
 import { Product, Reservation } from "@/types";
 import {
   X,
-  Store,
   Clock,
   MapPin,
   CheckCircle2,
   QrCode,
-  ShieldAlert,
   ArrowRight,
   ShoppingBag,
 } from "lucide-react";
@@ -75,7 +73,7 @@ export function ReservationModal({
               <ShoppingBag className="w-4 h-4" />
             </span>
             <h2 className="font-bold text-slate-900 text-sm sm:text-base">
-              {createdReservation ? "Voucher de Reserva Emitido!" : "Confirmar Reserva de Oferta"}
+              {createdReservation ? "Voucher de Reserva Emitido!" : "Confirmar Reserva no Supermercado"}
             </h2>
           </div>
 
@@ -97,10 +95,10 @@ export function ReservationModal({
 
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
-                  Reserva Garantida no Balcão
+                  Reserva Garantida no Supermercado
                 </span>
                 <h3 className="text-xl font-black text-slate-900 mt-1">
-                  Apresente este código ao retirar:
+                  Apresente este código no caixa ao retirar:
                 </h3>
               </div>
 
@@ -118,7 +116,7 @@ export function ReservationModal({
                 <div className="pt-3 border-t border-slate-800 text-xs text-left grid grid-cols-2 gap-2 text-slate-300">
                   <div>
                     <span className="block text-[10px] text-slate-400 uppercase">
-                      Estabelecimento
+                      Supermercado
                     </span>
                     <strong className="text-white">
                       {createdReservation.storeName}
@@ -152,8 +150,8 @@ export function ReservationModal({
               </div>
 
               <div className="bg-amber-50 border border-amber-200 text-amber-900 rounded-xl p-3 text-xs text-left">
-                <strong>Atenção:</strong> O pagamento é feito diretamente no balcão
-                ao retirar o pedido. Não houve cobrança no app.
+                <strong>Atenção:</strong> O pagamento é feito diretamente no caixa do
+                supermercado ao retirar o lote. Não houve cobrança no app.
               </div>
 
               <div className="grid grid-cols-2 gap-2 pt-2">
@@ -211,7 +209,7 @@ export function ReservationModal({
               {/* Quantity selector */}
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-                  Quantidade a reservar (Máx: {product.quantity} {product.unit})
+                  Quantidade a reservar (Disponível no supermercado: {product.quantity} {product.unit})
                 </label>
                 <div className="flex items-center gap-3">
                   <div className="flex items-center border border-slate-300 rounded-xl overflow-hidden">
@@ -246,7 +244,7 @@ export function ReservationModal({
               {/* Customer Name */}
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Nome para Identificação no Balcão
+                  Nome para Identificação no Caixa
                 </label>
                 <input
                   type="text"
@@ -262,7 +260,7 @@ export function ReservationModal({
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/60 text-xs text-slate-600 space-y-1">
                 <div className="flex items-center gap-1.5 font-semibold text-slate-800">
                   <MapPin className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Local de Retirada:</span>
+                  <span>Unidade do Supermercado:</span>
                 </div>
                 <p className="pl-5 text-slate-600">
                   {product.storeAddress} ({product.distanceKm} km de distância)
@@ -280,7 +278,7 @@ export function ReservationModal({
                   <span>R$ {savings.toFixed(2).replace(".", ",")}</span>
                 </div>
                 <div className="flex justify-between text-sm font-black text-slate-900 pt-1 border-t border-emerald-200/60">
-                  <span>Total a Pagar na Retirada:</span>
+                  <span>Total a Pagar no Caixa:</span>
                   <span className="text-emerald-700">
                     R$ {total.toFixed(2).replace(".", ",")}
                   </span>
@@ -303,7 +301,7 @@ export function ReservationModal({
               </button>
 
               <p className="text-[11px] text-center text-slate-400">
-                Pagamento realizado apenas presencialmente no caixa da loja.
+                Pagamento realizado apenas presencialmente no caixa do supermercado.
               </p>
             </form>
           )}

@@ -27,40 +27,40 @@ const {
   resetDemoData,
 } = await import("./src/lib/storage.js");
 
-console.log("=== VENCEHOJE E2E BUSINESS FLOW TEST ===");
+console.log("=== VENCEHOJE E2E SUPERMARKET BUSINESS FLOW TEST ===");
 
 // 1. Initial State
 resetDemoData();
 const initialProducts = getProducts();
-console.log(`[1] Initial products loaded: ${initialProducts.length}`);
+console.log(`[1] Initial supermarket products loaded: ${initialProducts.length}`);
 assert.ok(initialProducts.length >= 8, "Must have initial catalog");
 
-// 2. Merchant posts new surplus item
-console.log("[2] Merchant 'Padaria Bella Vista' (store-1) posts a new near-expiration item...");
+// 2. Supermarket Loss Prevention posts new surplus item
+console.log("[2] Supermarket 'Supermercado CompreBem' (store-1) posts a new meat surplus item...");
 const newProduct = createProduct({
   storeId: "store-1",
-  storeName: "Padaria Bella Vista",
-  storeAddress: "Rua das Flores, 142",
-  distanceKm: 0.4,
-  name: "Bolo de Cenoura com Cobertura Belga",
-  category: "padaria",
-  originalPrice: 28.0,
-  discountedPrice: 11.2,
-  discountPercent: 60,
+  storeName: "Supermercado CompreBem (Loja Jardins)",
+  storeAddress: "Av. Paulista, 1420",
+  distanceKm: 0.5,
+  name: "Alcatra Bovina Especial Fatiada (900g)",
+  category: "acougue",
+  originalPrice: 48.0,
+  discountedPrice: 19.9,
+  discountPercent: 58,
   expirationDate: "Hoje",
   expirationUrgency: "today",
   pickupWindow: "Hoje até 20:30",
   quantity: 5,
-  unit: "un",
-  imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600",
+  unit: "pacote",
+  imageUrl: "https://images.unsplash.com/photo-1558030006-450675393462?w=600",
 });
 assert.ok(newProduct.id, "Product should have an id");
 assert.strictEqual(newProduct.quantity, 5, "Quantity should be 5");
 console.log(`    ✓ Product published: "${newProduct.name}" (ID: ${newProduct.id})`);
 
 // 3. Consumer discovers and reserves the item
-console.log("[3] Consumer 'João Silva' reserves 2 units of the product...");
-const reserveResult = createReservation(newProduct.id, "João Silva", 2);
+console.log("[3] Consumer 'Mariana Souza' reserves 2 packages of the meat item...");
+const reserveResult = createReservation(newProduct.id, "Mariana Souza", 2);
 assert.strictEqual(reserveResult.success, true, "Reservation must succeed");
 const voucher = reserveResult.reservation;
 assert.ok(voucher, "Reservation voucher must exist");
@@ -71,18 +71,18 @@ const updatedProduct = getProductById(newProduct.id);
 assert.strictEqual(updatedProduct.quantity, 3, "Stock must decrement from 5 to 3");
 console.log(`    ✓ Product stock decremented correctly to ${updatedProduct.quantity}`);
 
-// 4. Merchant views reservation in store dashboard
-console.log("[4] Merchant checks pending orders in store-1...");
+// 4. Supermarket views reservation in store dashboard
+console.log("[4] Supermarket checks pending reservations in store-1...");
 const storeOrders = getReservationsByStore("store-1");
 const foundOrder = storeOrders.find((r) => r.id === voucher.id);
-assert.ok(foundOrder, "Order must be visible in merchant dashboard");
+assert.ok(foundOrder, "Order must be visible in supermarket dashboard");
 assert.strictEqual(foundOrder.status, "pending", "Order must be pending pickup");
-console.log(`    ✓ Merchant found order ${foundOrder.code} for customer "${foundOrder.customerName}"`);
+console.log(`    ✓ Supermarket found order ${foundOrder.code} for customer "${foundOrder.customerName}"`);
 
-// 5. Customer arrives at store, presents voucher code
-console.log("[5] Customer presents voucher at checkout. Merchant validates...");
+// 5. Customer arrives at supermarket, presents voucher code at checkout
+console.log("[5] Customer presents voucher at checkout. Cashier validates...");
 const validatedOrder = getReservationByCode(voucher.code);
-assert.ok(validatedOrder, "Merchant must find order by code");
+assert.ok(validatedOrder, "Cashier must find order by code");
 const completeSuccess = completeReservation(validatedOrder.id);
 assert.strictEqual(completeSuccess, true, "Completion must succeed");
 
@@ -97,4 +97,4 @@ const afterResetProducts = getProducts();
 assert.strictEqual(afterResetProducts.length, initialProducts.length, "Products restored to initial count");
 console.log("    ✓ Reset successfully restored clean demo state.");
 
-console.log("\n>>> ALL E2E BUSINESS CHECKS PASSED PERFECTLY! <<<");
+console.log("\n>>> ALL SUPERMARKET E2E BUSINESS CHECKS PASSED PERFECTLY! <<<");

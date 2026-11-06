@@ -41,11 +41,11 @@ export default function LandingPage() {
               <div className="lg:col-span-7 space-y-6">
                 <div className="inline-flex items-center gap-2 bg-emerald-100/80 border border-emerald-200/80 text-emerald-800 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
                   <Leaf className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Economia Circular & Consumo Consciente</span>
+                  <span>Prevenção de Perdas em Supermercados & Economia Circular</span>
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-                  Alimentos de qualidade com{" "}
+                  Grandes marcas de supermercado com{" "}
                   <span className="text-emerald-600 underline decoration-emerald-300 underline-offset-4">
                     até 70% de desconto
                   </span>
@@ -53,10 +53,10 @@ export default function LandingPage() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-                  Encontre produtos próximos da validade em padarias, hortifrútis e
-                  supermercados no seu bairro.{" "}
-                  <strong>Transparência total por item</strong>: veja exatamente o
-                  que está comprando e a data de vencimento antes de reservar.
+                  Encontre cortes nobres de açougue, queijos, laticínios e rotisseria
+                  com data de validade próxima nos supermercados da sua região.{" "}
+                  <strong>Transparência total por item</strong>: veja lote, foto,
+                  estoque e vencimento antes de reservar.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
@@ -65,7 +65,7 @@ export default function LandingPage() {
                     className="flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-emerald-600/30 transition text-sm sm:text-base group"
                   >
                     <ShoppingBag className="w-5 h-5" />
-                    <span>Explorar Ofertas Disponíveis</span>
+                    <span>Ver Ofertas no Supermercado</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
                   </Link>
 
@@ -74,7 +74,7 @@ export default function LandingPage() {
                     className="flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-semibold py-3.5 px-5 rounded-2xl shadow-sm transition text-sm sm:text-base"
                   >
                     <Store className="w-4 h-4 text-emerald-600" />
-                    <span>Sou Comerciante (Cadastrar Loja)</span>
+                    <span>Sou Supermercadista (Cadastrar Rede)</span>
                   </button>
                 </div>
 
@@ -85,23 +85,23 @@ export default function LandingPage() {
                       R$ 0 taxas
                     </span>
                     <span className="text-xs text-slate-500">
-                      Pague direto na loja
+                      Pague no caixa da loja
                     </span>
                   </div>
                   <div>
                     <span className="block text-xl font-extrabold text-emerald-600">
-                      100% visível
+                      Sem Sacola-Surpresa
                     </span>
                     <span className="text-xs text-slate-500">
-                      Sem sacola surpresa
+                      Você escolhe o item exato
                     </span>
                   </div>
                   <div>
                     <span className="block text-xl font-extrabold text-slate-900">
-                      Hiperlocal
+                      Cortes Nobres
                     </span>
                     <span className="text-xs text-slate-500">
-                      Retirada em minutos
+                      Açougue, frios e laticínios
                     </span>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export default function LandingPage() {
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
                       <span className="text-xs font-bold text-slate-700">
-                        Oferta Real no Radar (400m)
+                        Oferta Real no Supermercado (500m)
                       </span>
                     </div>
                     <span className="text-[11px] font-bold bg-rose-50 text-rose-700 border border-rose-200 px-2 py-0.5 rounded-full flex items-center gap-1">
@@ -126,8 +126,8 @@ export default function LandingPage() {
                   <div className="relative rounded-2xl overflow-hidden mb-4 bg-slate-100 aspect-video">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop&q=80"
-                      alt="Croissant Francês"
+                      src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&auto=format&fit=crop&q=80"
+                      alt="Picanha Fatiada Resfriada"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-3 right-3 bg-emerald-600 text-white font-extrabold text-xs px-2.5 py-1 rounded-full shadow-md">
@@ -137,30 +137,30 @@ export default function LandingPage() {
 
                   <div className="space-y-2 mb-5">
                     <span className="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">
-                      Padaria Bella Vista • Centro
+                      Supermercado CompreBem • Loja Jardins
                     </span>
                     <h3 className="font-bold text-slate-900 text-lg leading-tight">
-                      Croissant Francês Amanteigado (4 un)
+                      Picanha Bovina Fatiada à Vácuo (800g)
                     </h3>
                     <p className="text-xs text-slate-500">
-                      Retirada hoje até 19:30 • Apenas 5 pacotes restantes
+                      Retirada hoje até 20:00 • Setor de Carnes Nobres Resfriadas
                     </p>
                   </div>
 
                   <div className="flex items-center justify-between pt-3 border-t border-slate-100">
                     <div>
                       <span className="text-xs text-slate-400 line-through block">
-                        R$ 24,00
+                        R$ 68,00
                       </span>
                       <span className="text-2xl font-black text-emerald-600">
-                        R$ 9,90
+                        R$ 28,90
                       </span>
                     </div>
                     <Link
                       href="/consumidor"
                       className="py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition flex items-center gap-1"
                     >
-                      <span>Reservar Agora</span>
+                      <span>Reservar Lote</span>
                       <ChevronRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -173,10 +173,10 @@ export default function LandingPage() {
                   </div>
                   <div>
                     <span className="block text-xs font-bold text-slate-900">
-                      Transparência de Validade
+                      Transparência de Vencimento
                     </span>
                     <span className="text-[11px] text-slate-500">
-                      Você sabe a data antes de ir
+                      Data exata antes da reserva
                     </span>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export default function LandingPage() {
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mt-2">
                 Os 4 passos essenciais mapeados em nosso Business Model Canvas:
-                simples, rápido e sem complicações.
+                simples, rápido e perfeitamente integrado à rotina do supermercado.
               </p>
             </div>
 
@@ -208,11 +208,11 @@ export default function LandingPage() {
                   1
                 </span>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
-                  Lojista Publica a Oferta
+                  Supermercado Publica o Lote
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  O comerciante insere os itens que estão prestes a vencer com
-                  desconto de 40% a 70% e estipula a janela de retirada.
+                  A equipe de prevenção de perdas cadastra cortes de açougue, frios
+                  ou iogurtes com desconto de 40% a 70% e janela de retirada.
                 </p>
               </div>
 
@@ -222,11 +222,11 @@ export default function LandingPage() {
                   2
                 </span>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
-                  Consumidor Encontra
+                  Consumidor Encontra no Bairro
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  O cliente abre o app, filtra por itens que vencem &quot;Hoje&quot; ou
-                  &quot;Amanhã&quot; e localiza comércios a poucos minutos de distância.
+                  O cliente abre o app, filtra por açougue ou laticínios que vencem
+                  &quot;Hoje&quot; ou &quot;Amanhã&quot; no supermercado a poucos minutos.
                 </p>
               </div>
 
@@ -236,11 +236,11 @@ export default function LandingPage() {
                   3
                 </span>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
-                  Reserva Garantida
+                  Reserva Garantida sem Cartão
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Em 1 clique, o consumidor garante o estoque com um voucher
-                  exclusivo (VH-XXXX) sem necessidade de cartão no app.
+                  Em 1 clique, o consumidor garante o item com um voucher
+                  exclusivo (VH-XXXX) sem necessidade de inserir cartão de crédito no app.
                 </p>
               </div>
 
@@ -250,11 +250,11 @@ export default function LandingPage() {
                   4
                 </span>
                 <h3 className="font-bold text-slate-900 text-base mb-2">
-                  Retirada no Balcão
+                  Retirada no Caixa do Supermercado
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  O cliente vai à loja física dentro do horário, apresenta o código
-                  e realiza o pagamento diretamente ao estabelecimento.
+                  O cliente vai à loja física, apresenta o código no caixa ou SAC,
+                  faz compras adicionais e paga direto no caixa (0% taxa no app).
                 </p>
               </div>
             </div>
@@ -272,8 +272,8 @@ export default function LandingPage() {
                 Por que o VenceHoje é diferente?
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mt-2">
-                O conceito de combater o desperdício já existe; nossa oportunidade é
-                executar com muito mais transparência e sem taxas abusivas.
+                O modelo de sacolas-surpresa não atende supermercados com carnes e
+                perecíveis de alto valor. Nossa proposta entrega precisão e fluxo físico.
               </p>
             </div>
 
@@ -301,7 +301,7 @@ export default function LandingPage() {
                       Produtos individuais com desconto
                     </td>
                     <td className="p-4 font-medium text-emerald-800 bg-emerald-50/50">
-                      Produto individual com foto, quantidade e validade exata
+                      Lotes individuais (açougue, frios, rotisseria) com validade exata
                     </td>
                   </tr>
                   <tr>
@@ -317,7 +317,7 @@ export default function LandingPage() {
                     </td>
                     <td className="p-4 font-medium text-emerald-800 bg-emerald-50/50 flex items-center gap-1.5">
                       <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                      Alta por desenho (preço, validade e estoque visíveis)
+                      Total (marca, peso, corte, data de validade e foto)
                     </td>
                   </tr>
                   <tr>
@@ -331,7 +331,7 @@ export default function LandingPage() {
                       Taxas sobre gateway de pagamento
                     </td>
                     <td className="p-4 font-medium text-emerald-800 bg-emerald-50/50">
-                      <strong>Zero taxas financeiras no app</strong> (paga no balcão)
+                      <strong>Zero taxas financeiras no app</strong> (paga no caixa da loja)
                     </td>
                   </tr>
                   <tr>
@@ -345,7 +345,7 @@ export default function LandingPage() {
                       Mista
                     </td>
                     <td className="p-4 font-medium text-emerald-800 bg-emerald-50/50">
-                      Foco no fluxo ao vivo de clientes na loja física (cross-selling)
+                      Clientes físicos no supermercado gerando compras cruzadas (cross-selling)
                     </td>
                   </tr>
                 </tbody>
@@ -354,21 +354,21 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* PARA COMERCIANTES (B2B) */}
+        {/* PARA SUPERMERCADOS (B2B) */}
         <section id="comerciantes" className="py-20 bg-white border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-                  Segmento Lojista (B2B)
+                  Prevenção de Perdas em Supermercados (B2B)
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
-                  Transforme desperdício em nova receita no seu caixa.
+                  Reduza a quebra operacional e recupere margem em perecíveis.
                 </h2>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                  Supermercados, padarias e hortifrútis sofrem perdas constantes
-                  com produtos que atingem a data de validade. O VenceHoje conecta
-                  seu estoque excedente à vizinhança antes que vire prejuízo.
+                  Supermercados médios sofrem quebras diárias de até 2,5% do
+                  faturamento nos setores de açougue, frios fatiados, rotisseria e
+                  hortifrúti. O VenceHoje liquida esses lotes com a vizinhança antes do descarte.
                 </p>
 
                 <div className="space-y-4">
@@ -378,10 +378,10 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 text-sm">
-                        Fim da perda total do produto
+                        Recuperação do custo da mercadoria (CMV)
                       </h3>
                       <p className="text-xs text-slate-500">
-                        Recupere o custo da mercadoria ao invés de jogar fora.
+                        Evite que cortes nobres e laticínios virem perda contábil integral.
                       </p>
                     </div>
                   </div>
@@ -392,11 +392,11 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 text-sm">
-                        Aumento do fluxo de clientes no balcão
+                        Atração de fluxo presencial e compras cruzadas
                       </h3>
                       <p className="text-xs text-slate-500">
-                        O cliente que vai retirar a oferta aproveita e compra outros
-                        itens pelo preço normal (cross-selling).
+                        Ao entrar no supermercado para retirar a carne ou queijo, o
+                        cliente circula pelas gôndolas e compra itens pelo preço cheio.
                       </p>
                     </div>
                   </div>
@@ -407,11 +407,11 @@ export default function LandingPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 text-sm">
-                        Zero risco financeiro e sem comissões abusivas
+                        Zero risco, sem integração pesada de ERP
                       </h3>
                       <p className="text-xs text-slate-500">
-                        Sem taxas de cartão ou intermediação dentro do aplicativo no
-                        piloto.
+                        Publicação em menos de 1 minuto diretamente pelo encarregado
+                        de setor ou gerente de prevenção de perdas.
                       </p>
                     </div>
                   </div>
@@ -423,7 +423,7 @@ export default function LandingPage() {
                     className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl transition text-sm shadow-md"
                   >
                     <Store className="w-4 h-4 text-emerald-400" />
-                    <span>Acessar Painel do Lojista</span>
+                    <span>Acessar Painel do Supermercado</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -434,16 +434,16 @@ export default function LandingPage() {
                 <div className="absolute top-0 right-0 translate-x-8 -translate-y-8 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl" />
 
                 <h3 className="text-lg font-bold text-emerald-400 mb-1">
-                  Exemplo de Impacto Mensal por Loja
+                  Exemplo de Impacto Mensal por Supermercado
                 </h3>
                 <p className="text-xs text-slate-400 mb-6">
-                  Estimativa média para uma padaria ou hortifrúti participante
+                  Estimativa média para uma loja regional de médio porte (10 a 18 checkouts)
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80">
                     <span className="block text-2xl font-black text-white">
-                      R$ 3.400
+                      R$ 12.800
                     </span>
                     <span className="text-[11px] text-slate-400">
                       Receita recuperada / mês
@@ -451,18 +451,18 @@ export default function LandingPage() {
                   </div>
                   <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80">
                     <span className="block text-2xl font-black text-emerald-400">
-                      ~180 kg
+                      ~650 kg
                     </span>
                     <span className="text-[11px] text-slate-400">
-                      Alimentos salvos do lixo
+                      Quebra de perecíveis evitada
                     </span>
                   </div>
                   <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80">
                     <span className="block text-2xl font-black text-amber-400">
-                      +120
+                      +380
                     </span>
                     <span className="text-[11px] text-slate-400">
-                      Novos clientes no balcão
+                      Fluxo de clientes na loja
                     </span>
                   </div>
                   <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80">
@@ -479,7 +479,7 @@ export default function LandingPage() {
                   onClick={() => openLead("merchant")}
                   className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs transition shadow-md"
                 >
-                  Quero Cadastrar Meu Comércio no Piloto
+                  Cadastrar Rede de Supermercados no Piloto
                 </button>
               </div>
             </div>
@@ -511,8 +511,8 @@ export default function LandingPage() {
                   R$ 850M<span className="text-base text-slate-500 font-normal">/ano</span>
                 </span>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  603 mil estabelecimentos de varejo alimentar no Brasil (GMV
-                  potencial de R$ 5,3 Bi em alimentos passíveis de desconto).
+                  Setor supermercadista e varejo alimentar no Brasil (quebra operacional
+                  estimada pela ABRAS em mais de R$ 7 Bi/ano).
                 </p>
               </div>
 
@@ -524,7 +524,7 @@ export default function LandingPage() {
                   R$ 135M<span className="text-base text-slate-500 font-normal">/ano</span>
                 </span>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  90 mil PMEs urbanas situadas em cidades com mais de 100 mil
+                  Supermercados regionais e médios situados em cidades com mais de 100 mil
                   habitantes nas regiões Sul e Sudeste.
                 </p>
               </div>
@@ -537,8 +537,8 @@ export default function LandingPage() {
                   R$ 1,46M<span className="text-base text-emerald-200/80 font-normal">/ano</span>
                 </span>
                 <p className="text-xs text-emerald-100/90 leading-relaxed">
-                  200 lojas parceiras ativas nos primeiros 18 a 24 meses do
-                  projeto.
+                  20 redes de supermercados parceiras e 120 lojas físicas ativas nos
+                  primeiros 18 a 24 meses do projeto.
                 </p>
               </div>
             </div>
@@ -552,8 +552,8 @@ export default function LandingPage() {
               Pronto para ver o MVP funcionando ao vivo?
             </h2>
             <p className="text-emerald-100 max-w-xl mx-auto text-sm sm:text-base">
-              Alterne entre a experiência do consumidor e o painel do lojista
-              utilizando a barra de topo da demonstração.
+              Alterne entre a experiência do consumidor e o painel de prevenção de perdas
+              do supermercado utilizando a barra superior.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <Link
@@ -566,7 +566,7 @@ export default function LandingPage() {
                 href="/lojista"
                 className="py-3 px-6 bg-emerald-950/70 hover:bg-emerald-950 text-white font-bold rounded-xl text-sm transition border border-emerald-400/40"
               >
-                Abrir Visão do Lojista
+                Abrir Visão do Supermercado
               </Link>
             </div>
           </div>

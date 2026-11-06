@@ -22,7 +22,7 @@ export function Navbar() {
                 Vence<span className="text-emerald-600">Hoje</span>
               </span>
               <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400 block -mt-0.5">
-                Economia Circular
+                Economia Circular • Supermercados
               </span>
             </div>
           </Link>
@@ -36,7 +36,7 @@ export function Navbar() {
               Diferenciais vs Concorrentes
             </a>
             <a href="#comerciantes" className="hover:text-emerald-600 transition">
-              Para Comerciantes
+              Para Supermercados
             </a>
             <a href="#mercado" className="hover:text-emerald-600 transition">
               Tamanho do Mercado
@@ -93,7 +93,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-medium text-slate-700"
             >
-              Para Comerciantes
+              Para Supermercados
             </a>
             <div className="pt-2 flex flex-col gap-2">
               <Link
@@ -106,7 +106,7 @@ export function Navbar() {
                 href="/lojista"
                 className="w-full text-center py-2.5 border border-slate-300 text-slate-700 font-bold rounded-xl text-sm"
               >
-                Abrir Painel do Lojista
+                Abrir Painel do Supermercado
               </Link>
             </div>
           </div>

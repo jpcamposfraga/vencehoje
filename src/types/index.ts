@@ -1,6 +1,7 @@
 export type UserRole = "landing" | "consumer" | "merchant";
 
 export type ProductCategory =
+  | "acougue"
   | "padaria"
   | "hortifruti"
   | "laticinios"

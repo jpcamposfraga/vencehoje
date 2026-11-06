@@ -19,9 +19,7 @@ import {
   CheckCircle2,
   Package,
   Trash2,
-  Search,
   QrCode,
-  ShieldCheck,
   Check,
 } from "lucide-react";
 
@@ -91,7 +89,7 @@ export default function MerchantDashboardPage() {
     if (res.storeId !== activeStoreId) {
       setQuickMessage({
         type: "error",
-        text: `Este voucher pertence a outro estabelecimento (${res.storeName}).`,
+        text: `Este voucher pertence a outro supermercado (${res.storeName}).`,
       });
       return;
     }
@@ -110,7 +108,7 @@ export default function MerchantDashboardPage() {
       type: "success",
       text: `Sucesso! Reserva ${searchCode} (${res.customerName} - R$ ${res.totalAmount.toFixed(
         2
-      )}) validada e concluída.`,
+      )}) validada e concluída no caixa.`,
     });
   };
 
@@ -130,10 +128,10 @@ export default function MerchantDashboardPage() {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                  Painel do Comerciante
+                  Painel do Supermercado
                 </h1>
                 <span className="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-bold rounded-full">
-                  B2B
+                  Prevenção de Perdas B2B
                 </span>
               </div>
               <p className="text-xs text-slate-500 mt-0.5">
@@ -146,7 +144,7 @@ export default function MerchantDashboardPage() {
             {/* Store Switcher */}
             <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl">
               <span className="text-[11px] font-bold text-slate-500 px-2">
-                Loja:
+                Unidade:
               </span>
               <select
                 value={activeStoreId}
@@ -166,7 +164,7 @@ export default function MerchantDashboardPage() {
               className="flex items-center gap-1.5 py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition shadow-md shadow-emerald-600/20 ml-auto md:ml-0"
             >
               <Plus className="w-4 h-4" />
-              <span>Publicar Oferta</span>
+              <span>Publicar Lote Excedente</span>
             </button>
           </div>
         </div>
@@ -182,14 +180,14 @@ export default function MerchantDashboardPage() {
             <div>
               <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wide">
                 <QrCode className="w-4 h-4" />
-                <span>Validação Rápida no Caixa</span>
+                <span>Validação Rápida no Caixa / Balcão SAC</span>
               </div>
               <h2 className="text-base font-bold text-white mt-1">
-                Cliente apresentou o código de retirada?
+                Cliente apresentou o voucher VenceHoje no caixa?
               </h2>
               <p className="text-xs text-slate-400">
-                Digite os 4 dígitos ou o código completo (ex: 7821 ou VH-7821) para
-                dar baixa imediata.
+                Digite o código (ex: 7821 ou VH-7821) para registrar a baixa e
+                receber o pagamento direto no caixa.
               </p>
             </div>
 
@@ -243,10 +241,10 @@ export default function MerchantDashboardPage() {
             }`}
           >
             <Clock className="w-4 h-4" />
-            <span>Reservas Recebidas</span>
+            <span>Vouchers & Reservas</span>
             {pendingReservations.length > 0 && (
               <span className="bg-amber-500 text-slate-950 px-1.5 py-0.2 rounded-full text-[10px] font-black">
-                {pendingReservations.length} pendentes
+                {pendingReservations.length} aguardando
               </span>
             )}
           </button>
@@ -260,7 +258,7 @@ export default function MerchantDashboardPage() {
             }`}
           >
             <Package className="w-4 h-4" />
-            <span>Itens Ativos no App ({products.length})</span>
+            <span>Lotes Ativos na Loja ({products.length})</span>
           </button>
         </div>
 
@@ -335,8 +333,8 @@ export default function MerchantDashboardPage() {
                   Nenhuma reserva recebida ainda
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
-                  Assim que um consumidor reservar um item no app, o voucher
-                  aparecerá aqui para conferência.
+                  Assim que um consumidor reservar um lote no app, o voucher
+                  aparecerá aqui para conferência no caixa.
                 </p>
               </div>
             )}
@@ -408,10 +406,10 @@ export default function MerchantDashboardPage() {
               <div className="text-center py-16 bg-white rounded-3xl border border-slate-200/80 p-8 max-w-md mx-auto">
                 <Package className="w-10 h-10 text-slate-300 mx-auto mb-2" />
                 <h3 className="font-bold text-slate-900 text-sm">
-                  Nenhum produto cadastrado para esta loja
+                  Nenhum produto cadastrado para esta unidade
                 </h3>
                 <p className="text-xs text-slate-500 mt-1 mb-4">
-                  Clique no botão abaixo para adicionar itens com validade próxima.
+                  Clique no botão abaixo para adicionar lotes de açougue, frios ou hortifrúti.
                 </p>
                 <button
                   onClick={() => setNewModalOpen(true)}

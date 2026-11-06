@@ -68,7 +68,7 @@ export function LeadCaptureModal({
               </h3>
               <p className="text-sm text-slate-600 mb-6">
                 Obrigado pelo interesse no <strong>VenceHoje</strong>. Nossa equipe
-                entrará em contato assim que novas vagas e lojas parceiras forem ativadas na sua região.
+                entrará em contato para ativar o piloto da sua unidade / região.
               </p>
               <button
                 onClick={handleClose}
@@ -120,7 +120,7 @@ export function LeadCaptureModal({
                     }`}
                   >
                     <Store className="w-3.5 h-3.5" />
-                    Comerciante
+                    Supermercadista
                   </button>
                 </div>
 
@@ -141,14 +141,14 @@ export function LeadCaptureModal({
                 {type === "merchant" && (
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Nome do seu Estabelecimento
+                      Nome da Rede / Supermercado
                     </label>
                     <input
                       type="text"
                       required
                       value={storeName}
                       onChange={(e) => setStoreName(e.target.value)}
-                      placeholder="Ex: Padaria Central, Empório Gourmet..."
+                      placeholder="Ex: Supermercados CompreBem (Loja Jardins)..."
                       className="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     />
                   </div>
@@ -163,7 +163,7 @@ export function LeadCaptureModal({
                     required
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
-                    placeholder="(11) 99999-9999 ou email@exemplo.com"
+                    placeholder="(11) 99999-9999 ou contato@comprebem.com.br"
                     className="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   />
                 </div>
@@ -185,7 +185,7 @@ export function LeadCaptureModal({
                   className="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition shadow-md text-sm mt-2"
                 >
                   {type === "merchant"
-                    ? "Quero Cadastrar Meu Comércio no Piloto"
+                    ? "Cadastrar Rede no Piloto de Supermercados"
                     : "Quero Receber Ofertas com Desconto"}
                 </button>
               </form>

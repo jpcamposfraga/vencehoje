@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Store, ProductCategory, Product } from "@/types";
-import { X, Sparkles, Plus, Image as ImageIcon } from "lucide-react";
+import { X, Plus } from "lucide-react";
 import { createProduct } from "@/lib/storage";
 
 interface NewProductModalProps {
@@ -14,28 +14,28 @@ interface NewProductModalProps {
 
 const PRESET_IMAGES = [
   {
-    name: "Pães / Croissant",
-    url: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&auto=format&fit=crop&q=80",
+    name: "Carnes / Açougue",
+    url: "https://images.unsplash.com/photo-1558030006-450675393462?w=600&auto=format&fit=crop&q=80",
   },
   {
-    name: "Bolo / Confeitaria",
-    url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    name: "Frutas / Morango",
-    url: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=600&auto=format&fit=crop&q=80",
+    name: "Frango / Aves",
+    url: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=600&auto=format&fit=crop&q=80",
   },
   {
     name: "Queijos / Frios",
     url: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&auto=format&fit=crop&q=80",
   },
   {
-    name: "Refeição / Massas",
-    url: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600&auto=format&fit=crop&q=80",
+    name: "Rotisseria / Assados",
+    url: "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&auto=format&fit=crop&q=80",
   },
   {
-    name: "Sucos Naturais",
-    url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=600&auto=format&fit=crop&q=80",
+    name: "Hortifrúti / Frutas",
+    url: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=600&auto=format&fit=crop&q=80",
+  },
+  {
+    name: "Laticínios / Iogurte",
+    url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop&q=80",
   },
 ];
 
@@ -46,15 +46,15 @@ export function NewProductModal({
   onProductCreated,
 }: NewProductModalProps) {
   const [name, setName] = useState("");
-  const [category, setCategory] = useState<ProductCategory>("padaria");
-  const [originalPrice, setOriginalPrice] = useState("20.00");
-  const [discountedPrice, setDiscountedPrice] = useState("8.00");
+  const [category, setCategory] = useState<ProductCategory>("acougue");
+  const [originalPrice, setOriginalPrice] = useState("45.00");
+  const [discountedPrice, setDiscountedPrice] = useState("19.90");
   const [expirationUrgency, setExpirationUrgency] = useState<
     "today" | "tomorrow"
   >("today");
   const [pickupWindow, setPickupWindow] = useState("Hoje até 20:00");
-  const [quantity, setQuantity] = useState("4");
-  const [unit, setUnit] = useState("un");
+  const [quantity, setQuantity] = useState("5");
+  const [unit, setUnit] = useState("pacote");
   const [imageUrl, setImageUrl] = useState(PRESET_IMAGES[0].url);
   const [description, setDescription] = useState("");
 
@@ -105,10 +105,10 @@ export function NewProductModal({
             </span>
             <div>
               <h2 className="font-bold text-slate-900 text-sm sm:text-base">
-                Publicar Oferta de Excedente
+                Publicar Lote com Vencimento Próximo
               </h2>
               <p className="text-[11px] text-slate-500">
-                Loja: {activeStore.name}
+                Supermercado: {activeStore.name}
               </p>
             </div>
           </div>
@@ -125,14 +125,14 @@ export function NewProductModal({
         <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-4">
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">
-              Nome do Produto com Validade Próxima
+              Nome do Produto / Lote no Supermercado
             </label>
             <input
               type="text"
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Ex: Pão de Queijo Mineiro (500g)"
+              placeholder="Ex: Picanha Fatiada à Vácuo Resfriada (800g)"
               className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
@@ -140,19 +140,20 @@ export function NewProductModal({
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Categoria
+                Setor / Categoria
               </label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value as ProductCategory)}
                 className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
               >
-                <option value="padaria">🥖 Padaria</option>
+                <option value="acougue">🥩 Açougue & Carnes</option>
+                <option value="laticinios">🧀 Frios & Laticínios</option>
+                <option value="padaria">🥖 Padaria & Rotisseria</option>
                 <option value="hortifruti">🍎 Hortifrúti</option>
-                <option value="laticinios">🧀 Laticínios</option>
-                <option value="refeicoes">🍲 Refeições</option>
+                <option value="refeicoes">🍲 Pratos Prontos</option>
                 <option value="bebidas">🥤 Bebidas</option>
-                <option value="mercearia">📦 Mercearia</option>
+                <option value="mercearia">📦 Mercearia & Secos</option>
               </select>
             </div>
 
@@ -166,7 +167,7 @@ export function NewProductModal({
                   const val = e.target.value as "today" | "tomorrow";
                   setExpirationUrgency(val);
                   setPickupWindow(
-                    val === "today" ? "Hoje até 20:00" : "Até amanhã às 12:00"
+                    val === "today" ? "Hoje até 20:00" : "Até amanhã às 14:00"
                   );
                 }}
                 className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
@@ -181,7 +182,7 @@ export function NewProductModal({
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-3 bg-slate-50 rounded-2xl border border-slate-200/80 items-end">
             <div>
               <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-                Preço Normal (R$)
+                Preço de Gôndola (R$)
               </label>
               <input
                 type="number"
@@ -195,7 +196,7 @@ export function NewProductModal({
 
             <div>
               <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-                Preço Promocional (R$)
+                Preço VenceHoje (R$)
               </label>
               <input
                 type="number"
@@ -227,7 +228,7 @@ export function NewProductModal({
                 required
                 value={pickupWindow}
                 onChange={(e) => setPickupWindow(e.target.value)}
-                placeholder="Ex: Hoje até 19:30"
+                placeholder="Ex: Hoje até 20:00"
                 className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
@@ -255,10 +256,11 @@ export function NewProductModal({
                   onChange={(e) => setUnit(e.target.value)}
                   className="w-full text-xs sm:text-sm px-2 py-2.5 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 >
-                  <option value="un">un</option>
                   <option value="pacote">pct</option>
                   <option value="bandeja">bdj</option>
+                  <option value="un">un</option>
                   <option value="kg">kg</option>
+                  <option value="pack">pack</option>
                 </select>
               </div>
             </div>
@@ -267,7 +269,7 @@ export function NewProductModal({
           {/* Quick Preset Images */}
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1.5">
-              Foto do Produto (Selecione uma imagem rápida para a demo)
+              Foto Representativa do Setor (Demo Rápida)
             </label>
             <div className="grid grid-cols-3 gap-2">
               {PRESET_IMAGES.map((img) => (
@@ -298,7 +300,7 @@ export function NewProductModal({
             className="w-full py-3.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl text-xs sm:text-sm transition shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 mt-4"
           >
             <Plus className="w-4 h-4" />
-            <span>Publicar Oferta Imediatamente</span>
+            <span>Publicar Oferta no Catálogo do Supermercado</span>
           </button>
         </form>
       </div>

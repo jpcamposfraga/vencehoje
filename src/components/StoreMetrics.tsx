@@ -32,7 +32,7 @@ export function StoreMetrics({ products, reservations }: StoreMetricsProps) {
       <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-semibold text-slate-500">
-            Ofertas Ativas
+            Lotes em Oferta
           </span>
           <span className="p-2 bg-emerald-50 text-emerald-600 rounded-xl">
             <Package className="w-4 h-4" />
@@ -42,7 +42,7 @@ export function StoreMetrics({ products, reservations }: StoreMetricsProps) {
           {activeProductsCount}
         </div>
         <span className="text-[11px] text-slate-400 block mt-1">
-          Itens visíveis no app
+          Itens ativos nas gôndolas
         </span>
       </div>
 
@@ -60,7 +60,7 @@ export function StoreMetrics({ products, reservations }: StoreMetricsProps) {
           {pendingReservations.length}
         </div>
         <span className="text-[11px] text-slate-400 block mt-1">
-          Clientes a caminho
+          Clientes a caminho da loja
         </span>
       </div>
 
@@ -78,7 +78,7 @@ export function StoreMetrics({ products, reservations }: StoreMetricsProps) {
           R$ {revenueRecovered.toFixed(2).replace(".", ",")}
         </div>
         <span className="text-[11px] text-slate-400 block mt-1">
-          Recebido no balcão (0% taxa)
+          Recebido no caixa (0% taxa)
         </span>
       </div>
 
@@ -96,7 +96,7 @@ export function StoreMetrics({ products, reservations }: StoreMetricsProps) {
           {totalSavedUnits} un
         </div>
         <span className="text-[11px] text-slate-400 block mt-1">
-          Desperdício evitado
+          Quebra de estoque evitada
         </span>
       </div>
     </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Reservation } from "@/types";
 import { getReservations } from "@/lib/storage";
 import { VoucherCard } from "@/components/VoucherCard";
-import { Ticket, ArrowLeft, ShoppingBag, ShieldCheck } from "lucide-react";
+import { Ticket, ArrowLeft, ShoppingBag } from "lucide-react";
 
 export default function ReservationsPage() {
   const [reservations, setReservations] = useState<Reservation[]>([]);
@@ -50,7 +50,7 @@ export default function ReservationsPage() {
                 </h1>
               </div>
               <p className="text-xs text-slate-500 mt-0.5">
-                Apresente o código de 4 dígitos na loja física para pagar e retirar
+                Apresente o código de 4 dígitos no caixa do supermercado para pagar e retirar
               </p>
             </div>
           </div>

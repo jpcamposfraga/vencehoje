@@ -3,8 +3,8 @@ import "./globals.css";
 import { DemoHeader } from "@/components/DemoHeader";
 
 export const metadata: Metadata = {
-  title: "VenceHoje | Alimentos com até 70% OFF e Validade Transparente",
-  description: "Conectando padarias, hortifrútis e supermercados a pessoas que buscam economia e consumo consciente.",
+  title: "VenceHoje | Alimentos de Supermercado com até 70% OFF e Validade Transparente",
+  description: "Conectando redes e supermercados regionais a consumidores que buscam cortes nobres, frios e laticínios com economia real e combate ao desperdício.",
 };
 
 export default function RootLayout({

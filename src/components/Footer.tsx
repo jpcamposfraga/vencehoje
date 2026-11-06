@@ -17,8 +17,8 @@ export function Footer() {
             </div>
             <p className="text-slate-400 max-w-sm leading-relaxed mb-4">
               Plataforma hiperlocal contra o desperdício de alimentos. Conectamos
-              comércios locais a consumidores conscientes com até 70% de desconto
-              e transparência total de validade.
+              supermercados regionais e redes locais a consumidores conscientes com até 70% de desconto
+              em açougue, frios e perecíveis, com transparência total de validade.
             </p>
             <p className="text-[11px] text-slate-500">
               Projeto desenvolvido para a matéria de Empreendedorismo em Informática (EMI).
@@ -45,7 +45,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/lojista" className="hover:text-emerald-400 transition">
-                  Painel do Lojista Parceiro
+                  Painel do Supermercado Parceiro
                 </Link>
               </li>
             </ul>
@@ -57,7 +57,7 @@ export function Footer() {
               Seguindo a cartilha de Validação & MVP Lean (49 Educação / Ash Maurya): foco na faca afiada (proposta de valor real) e zero taxas de intermediação bancária.
             </p>
             <span className="inline-block px-2.5 py-1 bg-slate-800 text-emerald-400 rounded-md font-mono text-[10px]">
-              VenceHoje v1.0 • Piloto Web
+              VenceHoje v1.0 • Piloto Web Supermercados
             </span>
           </div>
         </div>
